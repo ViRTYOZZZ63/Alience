@@ -21,11 +21,13 @@ const closeMenu = (event) => {
   mMenuToggle.classList.remove("close-menu");
   document.body.style.overflow = ""; // возвращает прокутку сайта под меню
  lightModeOff();
+ window.scrollY>1 ? lightModeOn() : lightModeOff(); // Проверка уровня прокрутки после закрытия меню
   }
-  
-window.addEventListener("scroll", () => {  this.scrollY>1 ? lightModeOn() : lightModeOff();
-});
 mMenuToggle.addEventListener("click", (event) => {
   event.preventDefault();
   menu.classList.contains("is-open") ? closeMenu() : openMenu();
 })
+
+window.addEventListener('scroll', () => {
+  window.scrollY>1 ? lightModeOn() : lightModeOff(); // Проверка уровня прокрутки
+});
