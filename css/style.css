@@ -194,10 +194,11 @@ body{
   color: white;
   position: relative;
   width: 85rem;
+
 }
 .header-features-item{
   padding: 1.75rem 3.125rem;
-  min-width: 100%;
+  height: auto;
   width: 18rem;
   border: .0625rem solid rgba(235,235,240,0.2);
 }
