@@ -378,6 +378,57 @@ cursor: pointer;
   right: 0;
   z-index: 0;
 }
+.cards-trademarks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card-trademarks{
+  width: 720px;
+  height: 280px;
+  text-decoration: none;
+  border: 1px solid #ebebf0;
+  position: relative;
+  transition: border 0.3s;
+}
+.card-trademarks:hover .card-title-trademarks{
+  color:#5c8ee6;
+}
+.card-trademarks:hover{
+  border-color: #5c8ee6;
+}
+.card-content-trademarks{
+  padding: 2.5rem 3.125rem;
+  left: 280px;
+  right: 50px;
+  bottom: 71px;
+  top: 50px;
+  position: absolute;
+}
+.card-title-trademarks{
+  font-weight:400;
+  font-size: 1.75rem;
+  line-height: 140%;
+  color:#292d33;
+  margin-top: 0;
+  transition: color 0.3s;
+}
+.card-text-trademarks{
+  font-size: 1rem;
+  line-height: 160%;
+  color:#828a99;
+  margin-bottom: 24.625rem;
+}
+.card-image-trademarks{
+  width: 11.25rem;
+  height: 11.25rem;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  right: 490px;
+  top: 50px;
+
+}
 @media (max-width: 1700px) {
 html {
   font-size: 14px;
