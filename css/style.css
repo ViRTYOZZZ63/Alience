@@ -467,7 +467,7 @@ html {
     display: none;
    }
    .navbar{
-    height: 5rem;
+    height: 5.8rem;
    }
    .navbar-button{
     padding-left: 2rem;
@@ -490,6 +490,13 @@ html {
       .container{
         max-width: 60rem;
       }
+      .navbar-button{
+        padding-left: 2.3rem;
+        padding-right: 2.3rem;
+      }
+      .logo-svg{
+        max-width: 10rem;
+      }
       .header-nav{
         display: none;
       }
@@ -503,7 +510,7 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1.8rem ;
+        padding: 2.3rem 2.5rem ;
         border-right: 1px solid rgba(235,235,240,0.2);
       }
       .mobile-menu-line{
@@ -617,7 +624,7 @@ html {
     font-size: 4rem;
   }
   .header-content{
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
   .card{
     flex-basis: 100%;
@@ -629,12 +636,6 @@ html {
     max-width: 90%;
   
   }
-  .header-title{ 
-    font-size: 2rem;
-  }
-  .header-content{
-    padding-top: 1.5rem;
-  }
 }
 
 @media (max-width: 375px) {
@@ -645,7 +646,5 @@ html {
   .header-title{ 
     font-size: 1.5rem;
   }
-  .header-content{
-    padding-top: 1rem;
-  }
+ 
 }
