@@ -315,7 +315,7 @@ cursor: pointer;
   margin-top: .625rem;
   margin-bottom: 1.25rem;
 }
-.steps-link{
+.button-link{
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -324,7 +324,7 @@ cursor: pointer;
   line-height: 160%;
   color: #5c8ee6
 }
-.steps-link:before{
+.button-link:before{
   content: "";
   background: #5c8ee6;
   width: 2.5rem;
@@ -333,7 +333,7 @@ cursor: pointer;
   margin-right: 1.25rem;
   transition: width 0.2s;
 }
-.steps-link:hover:before{
+.button-link:hover:before{
   width: 3.75rem;
 }
 .cards{
@@ -420,6 +420,30 @@ cursor: pointer;
 .card-trademarks:hover .card-title-trademarks{
   color:#5c8ee6;
 }
+.founder{
+position: relative;
+}
+.founder-photo{
+  position: absolute;
+  left: 0;
+  width: 40%;
+  top: 0;
+  min-height: 41.25rem;
+  object-fit: cover;
+}
+.founder-content{
+  max-width: 45rem;
+}
+.founder-content-wrapper{
+  display: flex;
+  justify-content: flex-end;
+}
+.founder-text{
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
+  color: #828a99;
+}
 @media (max-width: 1700px) {
 html {
   font-size: 14px;
@@ -476,6 +500,9 @@ html {
   }
   .card-trademarks{
     grid-template-columns: auto auto;
+  }
+  .founder-content{
+    max-width: 35rem;
   }
     }
     @media (max-width: 992px) {
@@ -626,6 +653,11 @@ html {
   }
   .card{
     flex-basis: 100%;
+  }
+  .founder-photo{
+    position: relative;
+    width: 100%;
+    margin-bottom: 3.125rem;
   }
 }
 
