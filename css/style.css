@@ -549,12 +549,13 @@ min-height: 41.25rem;
   bottom: 0;
   left: 0;
   width: 45rem;
-  width: 50%;
+  max-width: 50%;
 }
 .section-cta{
   position: relative;
   padding-top: 6.25rem;
   margin-top: 9.375rem;
+  padding-bottom: 6.25rem;
 }
 .cta-form-wrapper{
   display: flex;
@@ -566,7 +567,7 @@ min-height: 41.25rem;
 .cta-form-text{
   font-style: normal;
   font-weight:400;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 160%;
   color: #828a99;
   margin-top: 1.375rem;
@@ -589,12 +590,54 @@ input{
   top: 0;
   left: 0;
   padding: 1.25rem 1.875rem;
+  border: 1px solid #e4e4eb;
 }
 .input-group-label{
   position: absolute;
   cursor: text;
-  top: 1rem;
-  left: 1.875rem;
+  top: 1.5rem;
+  left: 1.975rem;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #828a99;
+  transition: top 0.5s, left 0.5s, font-size 0.5s;
+}
+input:focus{
+  border: 1px solid #5c8ee6;
+  outline: 0;
+}
+.input:focus ~ .input-group-label, .input:not(:placeholder-shown).input:not(:focus) ~ .input-group-label{
+  top: -0.5rem;
+  left: 1.25rem;
+  font-size: .625rem;
+  background-color: #f0f2f5;
+  padding: 0 .625rem;
+}
+.cta-form-footer{
+  display: flex;
+  margin-top: 1.875rem;
+  gap: 1.875rem;
+  align-items: center;
+}
+.cta-form-button{
+  flex-shrink: 0;
+}
+.notify{
+  display: flex;
+  align-items: flex-start;
+  gap: .625rem;
+}
+.notify-icon{
+  flex-shrink: 0;
+}
+.notify-text{
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: .75rem;
+  line-height: 160%;
+  color: #828a99;
+  max-width: 23.75rem;
 }
 @media (max-width: 1700px) {
 html {
@@ -664,6 +707,9 @@ html {
   }
   .clients-content{
     flex-basis: 60%;
+  }
+  .cta-image{
+    width: 33%;
   }
     }
     @media (max-width: 992px) {
@@ -804,6 +850,9 @@ html {
     .clients-wrapper{
      flex-direction: column;
     }
+    .cta-image{
+      display: none;
+    }
   }
   @media (max-width: 768px) {
     .container{
@@ -842,6 +891,15 @@ html {
    .clients-logo-item{
     flex-basis: 50%;
    }
+   .input-group-wrapper{
+    flex-direction: column;
+   }
+   .cta-form-footer{
+    flex-direction: column;
+   }
+   .cta-form-button{
+    width: 100%;
+  }
 }
 
 @media (max-width: 375px) {
