@@ -478,6 +478,11 @@ min-height: 41.25rem;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  filter: grayscale(100%);
+}
+.clients-logo-item:hover{
+  filter: grayscale(0);
+  transition: 0.5s;
 }
 .clients-logo{
   max-width: 100%;
