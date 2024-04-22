@@ -833,7 +833,30 @@ input:focus {
   width: 100%;
   display: block;
 }
-
+.navblock-subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #292d33;
+}
+.navblock-subtitle-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.navblock-title {
+  margin-bottom: 0;
+}
+.seporator-nvbl {
+  margin-bottom: 0;
+}
+.navblock-wrapper {
+  margin-top: 94px;
+  display: grid;
+  grid-template-rows: 50px 90px 90px;
+  align-items: end;
+}
 @media (max-width: 1700px) {
   html {
     font-size: 14px;
