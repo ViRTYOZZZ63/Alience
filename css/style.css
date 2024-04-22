@@ -24,7 +24,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-.logo {
+.logo-dark {
   display: none;
 }
 .logo-svg {
@@ -50,6 +50,14 @@ body {
 .navbar-light {
   background-color: white;
   color: #292d33;
+}
+.navbar-light .logo-light {
+  display: none;
+}
+.navbar-light .logo-dark {
+  display: block;
+}
+.navbar-scroll {
   height: 4.625rem;
 }
 .navbar-light .header-logo-path {

@@ -3,16 +3,19 @@ const logoLight = document.querySelector(".logo-logo-light");
 const logo = document.querySelector(".logo");
 const mMenuToggle = document.querySelector(".mobile-menu-toggle");
 const menu = document.querySelector(".mobile-menu");
+const isFront = documents.body.classList.contains("front-page");
+
 const lightModeOn = (event) => {
   navbar.classList.add("navbar-light");
-  logo.style.display = "block";
-  logoLight.style.display = "none";
 };
 const lightModeOff = (event) => {
   navbar.classList.remove("navbar-light");
-  logo.style.display = "none";
-  logoLight.style.display = "block";
 };
+
+const changeNavHeight = (height) => {
+  navbar.style.height = height;
+};
+
 const openMenu = (event) => {
   menu.classList.add("is-open");
   mMenuToggle.classList.add("close-menu");
@@ -24,15 +27,18 @@ const closeMenu = (event) => {
   mMenuToggle.classList.remove("close-menu");
   document.body.style.overflow = ""; // возвращает прокутку сайта под меню
   lightModeOff();
-  window.scrollY > 1 ? lightModeOn() : lightModeOff(); // Проверка уровня прокрутки после закрытия меню
 };
+
+window.addEventListener("scroll", () => {
+  this.scrollY > 1 ? changeNavHeight("4.5rem") : changeNavHeight("5.875rem"); // Проверка уровня прокрутки
+  if (isFront) {
+    this.scrollY > 1 ? lightModeOn() : lightModeOff();
+  }
+});
+
 mMenuToggle.addEventListener("click", (event) => {
   event.preventDefault();
   menu.classList.contains("is-open") ? closeMenu() : openMenu();
-});
-
-window.addEventListener("scroll", () => {
-  window.scrollY > 1 ? lightModeOn() : lightModeOff(); // Проверка уровня прокрутки
 });
 
 const modal = document.querySelector(".modal");
