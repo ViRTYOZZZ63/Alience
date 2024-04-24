@@ -857,6 +857,37 @@ input:focus {
   grid-template-rows: 50px 90px 90px;
   align-items: end;
 }
+.seo-title{
+  font-family: "Bebas Neue Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 120%;
+  color: #292d33;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.seo-text{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #828a99;
+  margin-bottom: 30px;
+}
+.seo-link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 160%;
+  color: #5c8ee6;
+  padding-left: 15px;
+}
+.seo-more{
+  display: flex;
+}
 @media (max-width: 1700px) {
   html {
     font-size: 14px;
