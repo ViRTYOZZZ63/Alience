@@ -412,7 +412,7 @@
   <div class="bg-grey section-cta">
     <img src="/img/ctaimg.png" alt="cta-image" class="cta-image">
     <div class="cta-form-wrapper container">
-      <form action="handler.php" method="post" class="cta-form">
+      <form onsubmit="handleSubmit(event)" class="cta-form">
         <h2 class="section-title cta-form-title">Хотите сотрудничать?</h2>
         <p class="cta-form-text">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!</p>
         <div class="input-group-wrapper">
@@ -593,5 +593,46 @@
 <script src="js/main.js"> </script>
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/swiper.js"></script>
+<script>
+     // Функция для отправки сообщения в Телеграм
+     function sendMessageToTelegram(data) {
+      const botToken = '6390722480:AAFt8bwcszfWA337NRju7cTpuZzl58H1zvw'; // Замените YOUR_TELEGRAM_BOT_TOKEN на токен вашего бота
+      const chatId = '-4110129036'; // Замените YOUR_CHAT_ID на идентификатор чата или имя пользователя
+      const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+      // Текст сообщения
+      const messageText = `Имя: ${data.username}\nТелефон: ${data.userphone}`;
+
+      fetch(telegramApiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: messageText,
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Успешно отправлено:', data);
+      })
+      .catch(error => {
+        console.error('Ошибка при отправке:', error);
+      });
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+
+      const form = event.target;
+      const formData = {
+        username: form.username.value,
+        userphone: form.userphone.value,
+      };
+
+      sendMessageToTelegram(formData); // Отправляем данные в Телеграм
+    }
+</script>
 </body>
 </html>
