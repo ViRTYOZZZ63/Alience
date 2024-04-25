@@ -596,11 +596,9 @@
 <script>
      // Функция для отправки сообщения в Телеграм
      function sendMessageToTelegram(data) {
-      const botToken = '6390722480:AAFt8bwcszfWA337NRju7cTpuZzl58H1zvw'; // Замените YOUR_TELEGRAM_BOT_TOKEN на токен вашего бота
-      const chatId = '-4110129036'; // Замените YOUR_CHAT_ID на идентификатор чата или имя пользователя
+      const botToken = '6390722480:AAFt8bwcszfWA337NRju7cTpuZzl58H1zvw'; 
+      const chatId = '-4110129036'; 
       const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
-      // Текст сообщения
       const messageText = `Имя: ${data.username}\nТелефон: ${data.userphone}`;
 
       fetch(telegramApiUrl, {
