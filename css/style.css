@@ -14,6 +14,9 @@ body {
 .mobile-menu {
   display: none;
 }
+.black-on {
+  color: #000000;
+}
 .container {
   max-width: 1440px;
   margin: auto;
@@ -1000,6 +1003,9 @@ input:focus {
     justify-content: space-between;
     padding: 2.3rem 2.5rem;
     border-right: 1px solid rgba(235, 235, 240, 0.2);
+  }
+  .mMenuHeight {
+    height: 70px;
   }
   .mobile-menu-line {
     width: 100%;
