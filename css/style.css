@@ -14,6 +14,9 @@ body {
 .mobile-menu {
   display: none;
 }
+.black-on {
+  color: #000000;
+}
 .container {
   max-width: 1440px;
   margin: auto;
@@ -64,7 +67,9 @@ body {
   fill: #292d33;
 }
 .header {
-  padding: 5.875rem;
+  padding-left: 5.875rem;
+  padding-right: 5.875rem;
+  padding-top: 5.875rem;
 }
 .header-image {
   background-image: url("../img/header-bg.jpeg");
@@ -216,6 +221,7 @@ body {
   position: relative;
   width: 85rem;
   height: 100%;
+  margin-bottom: 0;
 }
 .header-features-item {
   padding: 1.75rem 3.125rem;
@@ -406,6 +412,7 @@ body {
 .card-image-trademarks {
   grid-area: logo;
   width: 100%;
+  fill: #828a99;
 }
 .card-title-trademarks {
   grid-area: title;
@@ -429,6 +436,9 @@ body {
 }
 .card-trademarks:hover .card-title-trademarks {
   color: #5c8ee6;
+}
+.card-trademarks:hover .card-image-trademarks {
+  fill: #5c8ee6;
 }
 .founder {
   position: relative;
@@ -860,7 +870,7 @@ input:focus {
   grid-template-rows: 50px 90px 90px;
   align-items: end;
 }
-.seo-title{
+.seo-title {
   font-family: "Bebas Neue Regular";
   font-style: normal;
   font-weight: 400;
@@ -870,7 +880,7 @@ input:focus {
   margin-top: 0;
   margin-bottom: 20px;
 }
-.seo-text{
+.seo-text {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -878,7 +888,7 @@ input:focus {
   color: #828a99;
   margin-bottom: 30px;
 }
-.seo-link{
+.seo-link {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -888,7 +898,7 @@ input:focus {
   color: #5c8ee6;
   padding-left: 15px;
 }
-.seo-more{
+.seo-more {
   display: flex;
 }
 @media (max-width: 1700px) {
@@ -921,10 +931,16 @@ input:focus {
   .header-phone {
     margin-right: 2rem;
   }
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 @media (max-width: 1200px) {
   .container {
     max-width: 70rem;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .header-phone {
     display: none;
@@ -994,6 +1010,9 @@ input:focus {
     justify-content: space-between;
     padding: 2.3rem 2.5rem;
     border-right: 1px solid rgba(235, 235, 240, 0.2);
+  }
+  .mMenuHeight {
+    height: 70px;
   }
   .mobile-menu-line {
     width: 100%;
@@ -1154,6 +1173,8 @@ input:focus {
 @media (max-width: 576px) {
   .container {
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .card-trademarks {
     grid-template-areas: "logo title" "text text";
@@ -1207,6 +1228,8 @@ input:focus {
 @media (max-width: 375px) {
   .container {
     max-width: 90%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .header-title {
     font-size: 1.5rem;
