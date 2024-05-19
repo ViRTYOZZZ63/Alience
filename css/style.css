@@ -412,6 +412,7 @@ body {
 .card-image-trademarks {
   grid-area: logo;
   width: 100%;
+  fill: #828a99;
 }
 .card-title-trademarks {
   grid-area: title;
@@ -435,6 +436,9 @@ body {
 }
 .card-trademarks:hover .card-title-trademarks {
   color: #5c8ee6;
+}
+.card-trademarks:hover .card-image-trademarks {
+  fill: #5c8ee6;
 }
 .founder {
   position: relative;
