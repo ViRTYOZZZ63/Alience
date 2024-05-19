@@ -61,6 +61,46 @@ document.addEventListener("keyup", (event) => {
   }
 });
 
+// const forms = document.querySelectorAll("form");
+// forms.forEach((form) => {
+//   const validation = new JustValidate(form, {
+//     errorFieldCssClass: "is-invalid",
+//   });
+//   validation
+//  .addField("[name=username]", [
+//  {
+//  rule: "required",
+//  errorMessage: 'Field is required',
+//  },
+//  {
+//  rule: "maxLength",
+//  value: 30,
+//  },
+//  ])
+//  .addField("[name=userphone]", [
+//  {
+//  rule: 'required',
+//  errorMessage: 'Field is required',
+//  },
+//  ])
+//  .onSuccess((event) => {
+//   const thisForm = event.target;
+//   const formData = new FormData(thisForm);
+//   const ajaxSend = (fromData) => {
+//     fetch(thisForm.getAttribute("action"),
+//      { method: thisForm.getAttribute("method"),
+//      body: formData, }).then((response)=> {
+//       if (response.ok) {
+//         thisForm.reset();
+//         alert("Ваша заявка успешно отправлена!");
+//       } else { 
+//         alert(response.statusText);
+//       }
+//      });
+//   };
+// });
+// });
+
 /* Создаем префикс +7, даже если вводят 8 или 9 */
 const prefixNumber = (str) => {
   /* если вводят семерку, добавляем ей скобку */

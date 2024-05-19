@@ -627,6 +627,9 @@ input:focus {
   background-color: #f0f2f5;
   padding: 0 0.625rem;
 }
+.input.is-invalid{
+  border: 1px solid red;
+}
 .cta-form-footer {
   display: flex;
   margin-top: 1.875rem;
